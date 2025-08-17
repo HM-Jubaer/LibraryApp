@@ -7,6 +7,10 @@ A clean, responsive library management web application built with HTML, CSS, and
 - Remove books from the collection
 - View all books in an organized grid layout
 
+## Preview
+
+![Library App ](./UI(Library%20App).png)
+
 ## Features
 
 📚 **Book Management**
