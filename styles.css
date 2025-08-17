@@ -3,3 +3,345 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --ColorOne: #5955B3;
+    --ColorTwo: #F4F4FE;
+    --ColorThree: #E2CBFF;
+}
+body {
+    background-color: var(--ColorThree);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.mainContainer {
+    background-color: var(--ColorOne);
+    width: 98vw;
+    height: 98vh;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.sideBar{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center ;
+    padding: 16px;
+
+}
+
+.iconList {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    width:48px;
+    height: 32px;
+}
+
+.iconList img {
+    width: 22px;
+    height: 22px;
+}
+
+.logoText {
+    font-family: sans-serif;
+    transform: Uppercase;
+    color: white;
+    font-weight: 900;
+    font-size: 28px;
+}
+
+.iconList .menuText {
+    font-family: sans-serif;
+    transform: Uppercase;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.menuContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+}
+.mainBar{
+    width: 80%;
+    display: coloumn;
+    background-color: white;
+    border-radius: 24px;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 20% 80%;
+  grid-template-columns: 70% 30%;
+}
+
+.header {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 40% 60%;
+}
+
+.topBar {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+ 
+.bottomBar {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightHeader {
+    grid-column: 2;
+    grid-row: 1/3;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+}
+
+p.headingOne {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ColorOne);
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    outline: none;
+    width: 300px;
+}
+
+.search-button {
+    padding: 11px 12px;
+    border: none;
+    background-color: transparent;
+    border-radius: 0 16px 16px 0;
+    cursor: pointer;
+    margin-left: -38px;
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.user {
+    width: 60px;
+}
+
+select {
+    padding: 8px 22px;
+    border-radius: 16px;
+    background-color: var(--ColorThree);
+    cursor: pointer;
+    outline: none;
+}
+.libraryDock {
+  grid-column: 1;
+  grid-row: 2;
+  border: 0.5px solid rgba(0, 0, 0, 0.164);
+  border-radius: 16px;
+}
+
+.submitForm {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.addBook {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5955B3;
+       padding: 20px;
+    border-radius: 16px;
+}
+
+h3{
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 40px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#addBookForm input {
+    padding: 8px;
+    border-radius: 16px;
+    outline: none;
+    border: none;
+}
+
+.statusOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+#addBookForm button {
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 16px;
+    border: none;
+    display: block;
+    margin: 60px auto 0px ;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#addBookForm button::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #5955B3;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 0.2s ease-in-out;
+    z-index: -1;
+}
+
+#addBookForm button:hover::before {
+    left: 0%;
+}
+
+#addBookForm button:hover {
+    color: white !important;
+    border: 1px solid white;
+}
+
+.libraryDock {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.bookCard {
+  background-color: var(--ColorTwo);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.bookCard:hover {
+  transform: translateY(-5px);
+}
+
+.bookCard h3 {
+  color: var(--ColorOne);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.bookCard p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.bookCard .status {
+  color: var(--status-color, #555);
+}
+
+.bookActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.bookActions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.bookActions button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.toggleReadBtn {
+  background-color: var(--ColorOne);
+  color: white;
+  flex: 1;s
+}
+
+.removeBtn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.emptyMessage {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  grid-column: 1 / -1;
+  margin-top: 40px;
+}
+
+[data-status="true"] .status {
+  color: green;
+}
+
+[data-status="false"] .status {
+  color: #e67e22;
+}
+
+

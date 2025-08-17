@@ -7,7 +7,112 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <div class="mainContainer">
+
+        <div class="sideBar">
+            <div class="iconList">
+                <img src="/Assets/Icon/Open Book.png" alt="Library" id="logo">
+                <p class="logoText">Library</p>
+            </div>
+            <div class="menuContainer">
+                <div class="iconList">
+                    <img src="/Assets/Icon/Speed.png" alt="Dashboard">
+                <p class="menuText">Dashboard</p>
+                </div>
+                <div class="iconList">
+                    <img src="Assets/Icon/Category.png" alt="Category">
+                    <p class="menuText">Category</p>
+                </div>
+                <div class="iconList">
+                    <img src="Assets/Icon/Document Writer.png" alt="Author">
+                <p class="menuText">Author</p>
+                </div>
+                <div class="iconList">
+                    <img src="Assets/Icon/Comedy.png" alt="Comedy">
+                <p class="menuText">Comedy</p>
+                </div>
+                <div class="iconList">
+                    <img src="Assets/Icon/Terms and Conditions.png" alt="Literature">
+                <p class="menuText">Literature</p>
+                </div>
+            </div>
+            <div class="settings">
+                 <div class="iconList">
+                    <img src="Assets/Icon/Settings.png" alt="settings">
+                <p class="menuText">Settings</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mainBar">
+
+            <div class="header">
+
+                 <div class="topBar">
+                    <p class="headingOne">My Books</p>
+                    <form action="/search" method="get" class="search-form">
+    <input type="search" name="q" placeholder="Search..." class="search-input">
+    <button type="submit" class="search-button">
+        <img src="/Assets/Icon/Search.png" alt="Search" class="search-icon">
+    </button>
+</form>
+                </div>
+
+                <div class="bottomBar">
+                    <p class="text">Filter By:</p>
+                    <div class="filters">
+          <select><option>Title</option></select>
+          <select><option>Author</option></select>
+          <select><option>Category</option></select>
+          <select><option>Genre</option></select>
+        </div>
+                </div>
+
+               <div class="rightHeader">
+                <div class="description">
+                    <p class="user">Captain Levi</p>
+                    <p class="id">ID: 989234</p>
+                </div>
+                <img src="Assets/Avatar.png" alt="user" class="user">
+               </div>
+
+            </div>
+
+            <div class="libraryDock">
+
+            </div>
+
+            <div class="submitForm">
+
+                  <aside class="addBook">
+      <h3>Add a new Book</h3>
+      <form id="addBookForm">
+        <label>Title:
+          <input type="text" id="title" placeholder="Write the name of the book..." required>
+        </label>
+        <label>Author:
+          <input type="text" id="author" placeholder="Write the name of the writer..." required>
+        </label>
+        <label>Pages:
+          <input type="number" id="pages" placeholder="Write the number of pages..." required>
+        </label>
+        <label>Status:</label>
+        <div class="statusOptions">
+          <label><input type="radio" name="status" value="Read" checked> Read</label>
+          <label><input type="radio" name="status" value="Not Read Yet"> Not Read Yet</label>
+        </div>
+        <button type="submit" class="button" id="button">Add Book</button>
+      </form>
+    </aside>
+
+            </div>
+
+        </div>
+
+    </div>
     
+
     <script src="script.js"></script>
 </body>
 </html>
